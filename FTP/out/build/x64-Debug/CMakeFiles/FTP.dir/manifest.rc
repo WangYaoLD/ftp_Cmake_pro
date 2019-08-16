@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "E:/MSVC_pro/FTP_cmake/FTP/out/build/x64-Debug/CMakeFiles/FTP.dir/embed.manifest"
