@@ -24,10 +24,15 @@ def main():
     # Instantiate a dummy authorizer for managing 'virtual' users
     authorizer = DummyAuthorizer()
 
+    current_path = os.path.abspath(__file__)
+    # Get the parent directory of the current file
+    father_path = os.path.abspath(os.path.dirname(current_path) + os.path.sep + "..")
+    print(father_path)
+
     # Define a new user having full r/w permissions and a read-only
     # anonymous user
-    authorizer.add_user('user', '12345', '.', perm='elradfmwMT')
-    authorizer.add_anonymous(os.getcwd())
+    authorizer.add_user('user', '12345', father_path, perm='elradfmwMT')
+    authorizer.add_anonymous(father_path)
 
     # Instantiate FTP handler class
     handler = FTPHandler
