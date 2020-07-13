@@ -1,4 +1,4 @@
-python FTP_server
+python FTP_server.py
 
 pause
 
